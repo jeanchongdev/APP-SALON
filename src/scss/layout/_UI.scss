@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-app {
+    @include m.tablet {
+        display: grid; //para hacer dos columnas
+        grid-template-columns: repeat(2, 1fr); //mitad de ambos lado izquierdo y derecha de la pantalla
+        min-height: 100vh; // des esta manera tendremos dos columnas que ocupan todo el alto de la pantalla
+    }
+
+    .imagen {
+        height: 20rem; //para darle una altura
+        background-image: url(../img/1.jpg); //para darle una imagen
+        background-size: cover;
+        background-position: center center;
+        @include m.tablet { 
+            height: auto; //para darle una altura
+        }
+    }
+
+    .app {
+        width: 95%; //para darle una anchura
+        margin: 0 auto; //para darle una margen
+        padding: 3rem 0;
+    }
+}
