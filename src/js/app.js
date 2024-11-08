@@ -318,3 +318,4 @@ function mostrarResumen() {
     resumen.appendChild(botonReservar); // Agrega el boton de Reservar Cita al HTML
 }
 
+// Función para reservar una cita
