@@ -248,6 +248,9 @@ function mostrarResumen() {
 
     if(Object.values(cita).includes('') || cita.servicios.length === 0 ) { // Si la cita esta vacia
         mostrarAlerta('Faltan datos de Servicios, Fecha u Hora', 'error', '.contenido-resumen', false);
+        console.log("el tamanio de servicios:"+(cita.servicios.length === 0));
+        console.log("lo que hay en cita:"+cita);
+        console.log(cita);
 
         return;
     } 
@@ -318,4 +321,3 @@ function mostrarResumen() {
     resumen.appendChild(botonReservar); // Agrega el boton de Reservar Cita al HTML
 }
 
-// Función para reservar una cita
